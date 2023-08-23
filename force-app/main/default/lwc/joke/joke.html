@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : Divya Sai Krishna
+  @group             : 
+  @last modified on  : 05-17-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="joke">
+    <p>
+        Random Joke
+    </p>
+    <lightning-icon icon-name="utility:smiley_and_people"  class="custom-icon" alternative-text="New note" title="New note"></lightning-icon>
+    <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <div class="slds-text-heading_large">
+            {joke}
+        </div>
+        <div class="slds-text-body_regular">
+           <h2>
+            {punchline}
+           </h2> 
+        </div>
+        <button onclick={fetchJoke}>Get Another Joke</button>
+    </div>
+</div>
+</template>

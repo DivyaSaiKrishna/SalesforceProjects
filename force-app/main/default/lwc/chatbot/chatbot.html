@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-18-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="chatbot-container">
+      <ul class="chatbot-messages">
+        <template for:each={chatMessages} for:item="message" for:index="index">
+            <li key={message.id} class={message.type}>
+                <div class="message-container">
+                <div class="message-text">{message.text}</div>
+                </div>
+            </li>
+        </template>
+      </ul>
+      <div class="chatbot-input">
+        <lightning-input
+          label="User Input"
+          value={userInput}
+          onkeydown={handleUserInput}
+          disabled={isProcessing}
+        ></lightning-input>
+      </div>
+    </div>
+  </template>
+  

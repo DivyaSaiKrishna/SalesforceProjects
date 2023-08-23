@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-18-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="container">
+        <h1>Talk to AradAI</h1></br>
+        <input type="text" value={transcription} oninput={handleTranscriptionChange} placeholder="Enter transcription" />
+        <button class="btn-show" onclick={getAllCommands}>Get All Commands</button>
+        
+       <lightning-icon icon-name="action:preview" alternative-text="Preview" title="Preview"></lightning-icon>
+        <button class="btn-start" onclick={startListening}>Start Listening</button>
+        <button class="btn-stop" onclick={stopListening}>Stop Listening</button>
+    </div>
+</template>
